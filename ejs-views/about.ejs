@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Paul | About</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="website icon" type="png/jpg" href="./f-1.png">
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -84,8 +85,9 @@ html {
     
     img{
     width: 100px;
-    display: flex;
-    border-radius: 30%;
+    display: absolute;
+    margin-top: 10px;
+    margin-left: -700px;
 }
 
     /* Genral Classes */
@@ -169,18 +171,33 @@ html {
         .circle img:nth-child(2) {
             top: 0rem;
         }
+
+        .timeline__slides {
+          --content-offset-x: 100%;
+        --content-offset-y: 100%;
+    }
     }
     @media screen and (max-width: 768px) {
         .circle::before {
             width: 41vw;
             height: 41vw;
         }
+
+        .timeline__slides {
+        --content-offset-x: 100%;
+        --content-offset-y: 100%;
+    }
     }
     @media screen and (max-width: 480px) {
         .circle::before {
             width: 90vw;
             height: 85vw;
         }
+
+        .timeline__slides {
+        --content-offset-x: 100%;
+        --content-offset-y: 100%;
+    }
     }
 
 body {
@@ -449,13 +466,6 @@ body a {
     height: var(--slides-container-height);
     border-radius: 5px;
     background-color: var(--bg-color-default);
-}
-
-@media(min-width: 700px) {
-    .timeline__slides {
-        --content-offset-x: 30px;
-        --content-offset-y: 40px;
-    }
 }
 
 .timeline__slides:before {

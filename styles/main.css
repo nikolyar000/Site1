@@ -1,7 +1,7 @@
 body {
   padding-top: 80px;
   min-height: calc(100vh - 90px);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   background: linear-gradient(to bottom, 030A16);
   color: #000;
@@ -160,7 +160,7 @@ img{
 
 nav {
   position: absolute;
-  top: 7%;
+  top: 4%;
   left: 75%;
   transform: translate(-50%, -50%);
 
@@ -203,6 +203,7 @@ article {
   padding: 10px 20px;
   border-radius: 3px;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .info {
@@ -299,10 +300,49 @@ textarea {
   margin-bottom: 20px;
 }
 
+.btn-edit,
+.btn-delete {
+  position: absolute;
+  top: 60px;
+  left: 85%;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 48px;
+  border-radius: 3px;
+  margin-right: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.btn-edit,
+.btn-delete:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-edit {
+  right: 65px;
+  left: 88%;
+}
+
+.btn-delete {
+  right: 10px;
+  left: 92%;
+}
+
+li a.active,
+li a:hover {
+    color: var(--primary-color);
+}
+
 @media screen and (max-width: 1024px) {
   .circle::before {
       width: 33vw;
       height: 33vw;
+      left: 1%;
   }
   .circle img:nth-child(2) {
       top: 0rem;
@@ -311,24 +351,62 @@ textarea {
   .nav::before{
     width: 100%;
   }
+
+  .btn-edit {
+    right: 65px;
+    left: 83%;
+  }
+  
+  .btn-delete {
+    right: 10px;
+    left: 90%;
+  }
 }
 @media screen and (max-width: 768px) {
   .circle::before {
-      width: 41vw;
-      height: 41vw;
+    width: 50px;
+    height: 50px;
   }
 
   .nav::before{
     width: 100%;
+  }
+
+  .btn-edit {
+    right: 65px;
+    left: 80%;
+  }
+  
+  .btn-delete {
+    right: 10px;
+    left: 90%;
   }
 }
 @media screen and (max-width: 480px) {
   .circle::before {
       width: 90vw;
       height: 85vw;
+      margin-right: 10px;
+      left: 10%;
   }
 
   .nav::before{
     width: 100%;
   }
+
+  .btn-edit {
+    right: 65px;
+    left: 85%;
+  }
+  
+  .btn-delete {
+    right: 10px;
+    left: 95%;
+  }
+
+  .container{
+    width: 100%;
+    left: -50%;
+  }
 }
+
