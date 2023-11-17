@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>PaintPaul | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="website icon" type="png/jpg" href="./f-1.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -75,15 +78,28 @@ html {
     
     .navbar-nav .nav-link {
         color: var(--dark-color);
+        position: relative;
+        left: 50%;
+        cursor: pointer;
+        opacity: 1;
     }
     
     .navbar-nav .nav-link.active {
         color: var(--primary-color);
+        position: relative;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .navbarSupportedContent{
+        width: 100%;
+        opacity: 0;
     }
     
     .navbar button {
         font-size: var(--btn-size);
         background-color: var(--primary-color);
+        cursor: pointer;
     }
     
     /* Navigation  End */
@@ -126,6 +142,11 @@ html {
         left: 0;
         top: 2rem;
         opacity: .4;
+    }
+
+    li a.active,
+    li a:hover {
+    color: var(--primary-color);
     }
     /* Section 1 End */
     
@@ -196,41 +217,45 @@ html {
         .circle img:nth-child(2) {
             top: 0rem;
         }
-    }
-    @media screen and (max-width: 768px) {
-        .circle::before {
-            width: 41vw;
-            height: 41vw;
-        }
-    }
-    @media screen and (max-width: 480px) {
-        .circle::before {
-            width: 90vw;
-            height: 85vw;
-        }
-    }
-
-
-@media only screen and (max-width: 643px){
-    .container2 .box{
+        .container2 .box{
         flex-direction: column;
     }
 
     .container2 .box .dream{
         width: 100%;
     }
-}
+        
+    }
+    @media screen and (max-width: 768px) {
+        .circle::before {
+            width: 41vw;
+            height: 41vw;
+        }
 
-@media only screen and (max-width: 643px){
-    .container2 .heading{
+        .container2 .box{
+        flex-direction: column;
+    }
+
+    .container2 .box .dream{
         width: 100%;
     }
-
-    .container2 .heading h3{
-        font-size: 1em;
     }
-}
+    @media screen and (max-width: 480px) {
+        .circle::before {
+            width: 90vw;
+            height: 85vw;
+        }
+
+        .container2 .box{
+        flex-direction: column;
+    }
+
+    .container2 .box .dream{
+        width: 100%;
+    }
+    }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg ">
@@ -247,13 +272,13 @@ html {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 gap-3 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active fw-semibold" aria-current="page" href="intro">Home</a>
+                <a class="nav-link fw-medium" aria-current="page" href="intro">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fw-medium" href="about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="skills">Skills</a>
+                <a class="nav-link active fw-semibold" href="skills">Skills</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fw-medium" href="contacts">Contact</a>
@@ -297,7 +322,8 @@ html {
         </div>
         </div>
     
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;

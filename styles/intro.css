@@ -127,16 +127,28 @@ animation: leftSideAni 1s ease forwards;
     .circle img:nth-child(2) {
         top: 0rem;
     }
+    .navbar-nav .nav-link{
+        display: flex;
+    justify-content: center;
+        }
 }
 @media screen and (max-width: 768px) {
     .circle::before {
         width: 100%;
         height: 95vw;
     }
+    .navbar-nav .nav-link{
+        display: flex;
+    justify-content: center;
+        }
 }
 @media screen and (max-width: 480px) {
     .circle::before {
         width: 100%;
         height: 95vw;
     }
+    .navbar-nav .nav-link{
+        display: flex;
+    justify-content: center;
+        }
 }

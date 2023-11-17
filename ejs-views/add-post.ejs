@@ -68,10 +68,15 @@
     
     .navbar-nav .nav-link {
         color: var(--dark-color);
+        position: relative;
+        left: 50%;
+        cursor: pointer;
     }
     
     .navbar-nav .nav-link.active {
         color: var(--primary-color);
+        position: relative;
+        cursor: pointer;
     }
     
     .navbar button {
@@ -142,8 +147,7 @@
 .btn{
     display: inline-block;
     background-color: #f9532d;
-    padding: 2px 9px
-    ;
+    padding: 2px 9px;
     margin-bottom: 1rem;
     font-size: 1.75rem;
     color: #fff;
@@ -193,6 +197,11 @@
         top: 2rem;
         opacity: .4;
     }
+
+    li a.active,
+    li a:hover {
+    color: var(--primary-color);
+    }
     /* Section 1 End */
     
     @media screen and (max-width: 1024px) {
@@ -203,17 +212,44 @@
         .circle img:nth-child(2) {
             top: 0rem;
         }
+        .navbar-nav .nav-link{
+          width: 100%;
+        }
+        .contact-form{
+          position: static;
+          margin-left: 310px;
+            height: 0vw; 
+        }
     }
     @media screen and (max-width: 768px) {
         .circle::before {
             width: 41vw;
             height: 41vw;
         }
+        .navbar-nav .nav-link{
+          width: 100%;
+          top: 20px;
+        }
+        .contact-form{
+          position: static;
+          margin-left: 310px;
+            height: 0vw; 
+        }
     }
     @media screen and (max-width: 480px) {
         .circle::before {
             width: 90vw;
             height: 85vw;
+        }
+        .navbar-nav .nav-link{
+          width: 100%;
+          margin-top: 60px;
+          top: 20px;
+        }
+        .contact-form{
+          position: static;
+          margin-left: 250px;
+            height: 0vw; 
         }
     }
     </style>
@@ -253,7 +289,7 @@
               <a class="nav-link fw-medium" href="posts">Commets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-medium" href="add-post">Add Post</a>
+              <a class="nav-link fw-medium" href="add-post">Review</a>
             </li>
           </ul>
         </div>

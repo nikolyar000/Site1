@@ -65,6 +65,8 @@
     
     .navbar-nav .nav-link {
         color: var(--dark-color);
+        position: relative;
+        left: 50%;
     }
     
     .navbar-nav .nav-link.active {
@@ -140,6 +142,8 @@ li a:hover {
         .contact{
           width: 100%;
           margin-left: 20%;
+          display: flex;
+    justify-content: center;  
         }
     }
     @media screen and (max-width: 768px) {
@@ -151,6 +155,8 @@ li a:hover {
         .contact{
           width: 100%;
           margin-left: 20%;
+          display: flex;
+    justify-content: center;  
         }
     }
     @media screen and (max-width: 480px) {
@@ -162,6 +168,8 @@ li a:hover {
         .contact{
           width: 100%;
           margin-left: 20%;
+        display: flex;
+    justify-content: center;  
         }
     }
     </style>
@@ -233,6 +241,22 @@ li a:hover {
                   </div>
               </div>
           </div>
+
+          <form action="/send_email" method="post">
+            <label for="email">Form:</label>
+            <input type="email" name="from" id="from">
+
+            <label for="to">Ti::</label>
+            <input type="email" name="to" id="to">
+
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <input type="submit" value="Send">
+          </form>
   </section>
     </section>
 </body>
